@@ -11,8 +11,8 @@ export const Container = styled.article`
 `;
 
 export const TransactionListItem = styled.section`
-  border: 2px solid var(--gray-light);
-  border-radius: 3px;
+  border: var(--border-gray-light);
+  border-radius: var(--border-radius-default);
   margin: 1em 0;
   padding: 1em;
   display: flex;

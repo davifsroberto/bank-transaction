@@ -5,6 +5,9 @@ export const GlobalStyle = createGlobalStyle`
     --gray: #9eadba;
     --gray-light: #c1cdd8;
     --gray-dark: #223442;
+
+    --border-gray-light: 2px solid var(--gray-light);
+    --border-radius-default: 3px;
   }
 
   * {

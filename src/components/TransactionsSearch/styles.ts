@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  border: 2px solid var(--gray-light);
-  border-radius: 3px;
+  border: var(--border-gray-light);
+  border-radius: var(--border-radius-default);
   width: 60%;
   margin: 0 auto;
   padding: 1.5em;
@@ -16,8 +16,8 @@ export const Container = styled.section`
 `;
 
 export const Input = styled.input`
-  border: 2px solid var(--gray-light);
-  border-radius: 3px;
+  border: var(--border-gray-light);
+  border-radius: var(--border-radius-default);
   padding: 0.8em;
   width: 67%;
 
@@ -27,8 +27,8 @@ export const Input = styled.input`
 `;
 
 export const Select = styled.select`
-  border: 2px solid var(--gray-light);
-  border-radius: 3px;
+  border: var(--border-gray-light);
+  border-radius: var(--border-radius-default);
   width: 30%;
   font-weight: bold;
   cursor: pointer;
