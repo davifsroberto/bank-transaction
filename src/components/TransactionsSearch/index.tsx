@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import { useTransactions } from '../../hooks/useTransactions';
 import { Container, Input, Select } from './styles';
 
-import React from 'react';
-
 export default function TransactionsSearch() {
   const { onFindTransaction } = useTransactions();
 
@@ -26,8 +24,8 @@ export default function TransactionsSearch() {
   return (
     <Container>
       <Input
-        onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => {
-          handleDescTransaction((e.target as HTMLInputElement).value);
+        onChange={(e) => {
+          handleDescTransaction(e.target.value);
         }}
         data-testid="description-search"
         placeholder="Buscar movimentação..."

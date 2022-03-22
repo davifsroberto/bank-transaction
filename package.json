@@ -19,13 +19,13 @@
     "test:NoPrompts": "CI=true react-scripts test --env=jsdom",
     "lint": "eslint src --max-warnings=0",
     "pretty": "prettier --config ./.prettierrc --write \"./**/*.{ts,js,tsx,json,css,scss,html}\"",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "cypress": "npx cypress open"
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn run pretty",
       "yarn lint --fix",
-      "yarn test:NoPrompts"
+      "yarn run pretty"
     ]
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
     "@testing-library/dom": "^8.11.3",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
@@ -51,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.12.0",
     "babel-jest": "^27.5.1",
+    "cypress": "^9.5.2",
     "eslint": "8.9.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
@@ -59,10 +61,12 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-storybook": "^0.5.6",
     "husky": "^7.0.4",
+    "install": "^0.13.0",
     "jest": "^27.5.1",
     "jest-dom": "^4.0.0",
     "lint-staged": "^12.3.7",
-    "prettier": "^2.6.0"
+    "prettier": "^2.6.0",
+    "start-server-and-test": "^1.14.0"
   },
   "eslintConfig": {
     "extends": [

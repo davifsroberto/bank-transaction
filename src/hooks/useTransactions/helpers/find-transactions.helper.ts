@@ -10,7 +10,7 @@ export function hasDescriptionHelper(
     .includes(searchTransaction.description.toLowerCase());
 }
 
-export function switchTransiction(
+export function switchTransaction(
   transaction: Transaction,
   searchTransaction: SearchTransaction
 ): boolean {

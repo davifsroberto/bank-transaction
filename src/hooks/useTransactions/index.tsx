@@ -15,7 +15,7 @@ import { Transaction } from '../../types/Transaction';
 import { SearchTransaction } from '../../types/DescriptionTransaction';
 import {
   hasDescriptionHelper,
-  switchTransiction,
+  switchTransaction,
 } from './helpers/find-transactions.helper';
 
 interface TransactionsProviderProps {
@@ -69,7 +69,7 @@ export default function TransactionsProvider({
       if (!searchTransaction.type)
         return hasDescriptionHelper(transaction, searchTransaction);
 
-      return switchTransiction(transaction, searchTransaction);
+      return switchTransaction(transaction, searchTransaction);
     });
 
     setFilteredTransactions(filtered);
