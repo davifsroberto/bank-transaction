@@ -13,30 +13,28 @@ export default function TransactionsSearch() {
     onFindTransaction({ type: typeTransaction, description: descTransaction });
   }, [typeTransaction, descTransaction]);
 
-  function handleTypeTransaction(type: string): void {
-    setTypeTransaction(type);
+  function handleTypeTransaction(
+    event: React.ChangeEvent<HTMLSelectElement>
+  ): void {
+    setTypeTransaction(event.target.value);
   }
 
-  function handleDescTransaction(description: string): void {
-    if (description !== descTransaction) setDescTransaction(description);
+  function handleDescTransaction(
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void {
+    if (event.target.value !== descTransaction)
+      setDescTransaction(event.target.value);
   }
 
   return (
     <Container>
       <Input
-        onChange={(e) => {
-          handleDescTransaction(e.target.value);
-        }}
+        onChange={handleDescTransaction}
         data-testid="description-search"
         placeholder="Buscar movimentação..."
       />
 
-      <Select
-        onChange={(e) => {
-          handleTypeTransaction(e.target.value);
-        }}
-        data-testid="type-search"
-      >
+      <Select onChange={handleTypeTransaction} data-testid="type-search">
         <option value="">Todas</option>
         <option value="input">Entrada</option>
         <option value="output">Saída</option>
